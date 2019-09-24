@@ -87,7 +87,7 @@ namespace Card
             SolidBrush trumpetmain2 = new SolidBrush(Color.FromArgb(100, 100, 100));
             SolidBrush cardborder = new SolidBrush(Color.FromArgb(200, 200, 200));
             Font textfont = new Font("Arial Black", 14, FontStyle.Bold);
-            Font textfont2 = new Font("Arial Black", 21, FontStyle.Bold);
+            Font textfont2 = new Font("Times new Roman", 25, FontStyle.Bold);
 
             //created format to slowly fade away text will repet many times
             g.Clear(Color.FromArgb(200, 200, 200));
