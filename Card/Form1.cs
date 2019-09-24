@@ -261,7 +261,7 @@ namespace Card
             g.ResetTransform();
             //END OF TRUMPET CODE
             DOOT.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             //end screen
             g.Clear(Color.FromArgb(255, 100, 100));
