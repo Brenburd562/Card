@@ -21,6 +21,8 @@ namespace Card
 
         private void Form1_Shown(object sender, EventArgs e)
         {
+            //Brendan Burdett (Card) 24/09/19
+            //a sppook_tober card with a doom theme
             //declartion of tools
             Graphics g = this.CreateGraphics();
             SolidBrush cardback = new SolidBrush(Color.FromArgb(247, 241, 172));
@@ -80,31 +82,35 @@ namespace Card
             Graphics g = this.CreateGraphics();
             SolidBrush text = new SolidBrush(Color.FromArgb(255, 0, 0, 0));
             SoundPlayer DOOT = new SoundPlayer(Properties.Resources.skullsound2);
+            SoundPlayer DOOM = new SoundPlayer(Properties.Resources.e1m1___at_doom_s_gate);
             SolidBrush trumpetmain = new SolidBrush(Color.FromArgb(251, 202, 9));
             SolidBrush trumpetmain2 = new SolidBrush(Color.FromArgb(100, 100, 100));
             SolidBrush cardborder = new SolidBrush(Color.FromArgb(200, 200, 200));
             Font textfont = new Font("Arial Black", 14, FontStyle.Bold);
+            Font textfont2 = new Font("Arial Black", 21, FontStyle.Bold);
+
             //created format to slowly fade away text will repet many times
-            g.Clear(Color.Silver);
+            g.Clear(Color.FromArgb(200, 200, 200));
             g.DrawString("I TOLD YOU NOT TO ENTER!", textfont, text, 200, 70);
             Thread.Sleep(200);
-            g.Clear(Color.Silver);
+            g.Clear(Color.FromArgb(200, 200, 200));
             SolidBrush text1 = new SolidBrush(Color.FromArgb(200, 0, 0, 0));
             g.DrawString("I TOLD YOU NOT TO ENTER!", textfont, text1, 200, 70);
             Thread.Sleep(200);
-            g.Clear(Color.Silver);
+            g.Clear(Color.FromArgb(200, 200, 200));
             SolidBrush text2 = new SolidBrush(Color.FromArgb(150, 0, 0, 0));
             g.DrawString("I TOLD YOU NOT TO ENTER!", textfont, text2, 200, 70);
             Thread.Sleep(200);
-            g.Clear(Color.Silver);
+            g.Clear(Color.FromArgb(200, 200, 200));
             SolidBrush text3 = new SolidBrush(Color.FromArgb(100, 0, 0, 0));
             g.DrawString("I TOLD YOU NOT TO ENTER!", textfont, text3, 200, 70);
             Thread.Sleep(200);
-            g.Clear(Color.Silver);
+            g.Clear(Color.FromArgb(200, 200, 200));
             SolidBrush text4 = new SolidBrush(Color.FromArgb(25, 0, 0, 0));
             g.DrawString("I TOLD YOU NOT TO ENTER!", textfont, text4, 200, 70);
             Thread.Sleep(200);
             g.Clear(Color.FromArgb(200,200,200));
+
             //START OF TRUMPET CODE
             g.TranslateTransform(20, 050);
             g.RotateTransform(15);
@@ -142,6 +148,7 @@ namespace Card
             //END OF TRUMPET CODE
             DOOT.Play();
             Thread.Sleep(1000);
+
             //START OF TRUMPET CODE
             g.TranslateTransform(500, 0);
             g.RotateTransform(80);
@@ -179,6 +186,7 @@ namespace Card
             //END OF TRUMPET CODE
             DOOT.Play();
             Thread.Sleep(1000);
+
             //START OF TRUMPET CODE
             g.TranslateTransform(400, 0);
             g.RotateTransform(350);
@@ -216,6 +224,7 @@ namespace Card
             //END OF TRUMPET CODE
             DOOT.Play();
             Thread.Sleep(1000);
+
             //START OF TRUMPET CODE
             g.TranslateTransform(400, 20);
             g.RotateTransform(130);
@@ -252,6 +261,13 @@ namespace Card
             g.ResetTransform();
             //END OF TRUMPET CODE
             DOOT.Play();
+            Thread.Sleep(1000);
+
+            //end screen
+            g.Clear(Color.FromArgb(255, 100, 100));
+            g.FillRectangle(trumpetmain, 200, 200, 300, 50);
+            g.DrawString("Happy Spook-tober", textfont2, text1, 200, 200);
+            DOOM.Play();
         }
     }
 }
